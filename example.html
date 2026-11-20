@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DEMO — Riverside Dental Practice — holding page</title>
+<title>Holding page demo — Riverside Dental Practice | Zentry</title>
+<meta name="description" content="A working example of a one-page mobile holding page built by Zentry: tap-to-call, address and a short enquiry form for a fictional dental practice.">
+<meta name="author" content="Zentry">
+<meta name="robots" content="noindex,follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://jaredatandi.github.io/zentry-site/example.html">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zentry">
+<meta property="og:title" content="Holding page demo — Riverside Dental Practice | Zentry">
+<meta property="og:description" content="A working example of a one-page mobile holding page: tap-to-call, address and a short enquiry form.">
+<meta property="og:url" content="https://jaredatandi.github.io/zentry-site/example.html">
+<meta property="og:image" content="https://jaredatandi.github.io/zentry-site/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 :root{--ink:#17252b;--muted:#5d6d74;--brand:#0d7a86;--brand2:#07525c;--bg:#f2f8f8;--card:#fff;--line:#d8e7e7}
 *{box-sizing:border-box}body{margin:0;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
@@ -19,13 +32,14 @@ button{background:var(--brand2);color:#fff;border:0;width:100%;padding:13px;bord
 <header><h1>Riverside Dental Practice</h1><div class="tag">Family dentistry in Riverside — open and taking appointments</div></header>
 <div class="wrap">
 <div class="card"><h2>Need an appointment?</h2><p class="small">Call us or send a short enquiry. We reply the same day.</p>
-<a class="tap" href="tel:+441234567890">📞 Call 01234 567 890</a>
+<a class="tap" href="tel:+441632960000">📞 Call 01632 960 000</a>
 <p class="small">18 Mill Lane, Riverside, RV1 2AB · Mon–Fri 8:30–5:30</p></div>
-<div class="card"><h2>Send an enquiry</h2><form onsubmit="return false">
+<div class="card"><h2>Send an enquiry</h2><form>
 <label>Your name</label><input placeholder="Name"><label>Phone or email</label><input placeholder="Phone or email">
 <label>What do you need?</label><textarea rows="3" placeholder="e.g. a check-up for my daughter"></textarea>
 <button>Send enquiry</button><p class="small">Demo form — nothing is submitted.</p></form></div>
 <div class="card"><h2>Our new website is on its way</h2><p class="small">Until it launches, call or send an enquiry above and we'll get straight back to you. Existing patients: please call the same number for urgent care.</p></div>
 </div>
 <footer class="small" style="text-align:center;padding:16px">Example page by Zentry — <a href="./">what we do</a> · Guard the entry. Move at speed.</footer>
+<script src="assets/demo.js" defer></script>
 </body></html>
