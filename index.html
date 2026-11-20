@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zentry — Guard the entry. Move at speed.</title>
+<meta name="description" content="Zentry builds sharp, mobile-first one-page websites in 48 hours and ATS-friendly career packs the same day. Fixed price, no subscription, clients worldwide.">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B1B2B'/%3E%3Cpath d='M32 9 53 17v16c0 13-9 20-21 23C20 53 11 46 11 33V17Z' fill='none' stroke='%2300D6B4' stroke-width='4'/%3E%3Cpath d='M22 25h20L22 41h20' fill='none' stroke='%2300D6B4' stroke-width='5'/%3E%3Crect x='29' y='50' width='7' height='3' rx='1' fill='%23FFB020'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#0B1B2B; --ink2:#12283C; --teal:#00D6B4; --amber:#FFB020;
+    --steel:#7C8A9A; --cloud:#F5F8FA; --line:#D9E2EA; --white:#FFFFFF;
+    --display:"Arial Black",Arial,Helvetica,sans-serif;
+    --body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cloud);color:var(--ink);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:#008D77;text-decoration:none}
+  a:hover{text-decoration:underline}
+  :focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+  .shell{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* ---------- top bar ---------- */
+  .topbar{background:var(--ink);color:var(--steel);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  .topbar .shell{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding-top:10px;padding-bottom:10px}
+  .topbar b{color:var(--teal);font-weight:700}
+
+  /* ---------- hero ---------- */
+  .hero{background:radial-gradient(700px 380px at 90% -12%,#173A52 0%,var(--ink) 58%);color:var(--white);padding:40px 0 60px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--teal) 0 22%,var(--ink2) 22% 100%)}
+  .hero .shell{position:relative;z-index:1}
+  .hero-logo{width:250px;height:auto;margin:0 0 26px}
+  .eyebrow{margin:0 0 10px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+  h1{font-family:var(--display);font-size:clamp(30px,8vw,52px);line-height:1.08;letter-spacing:-1px;margin:0 0 18px;text-transform:uppercase}
+  h1 em{display:block;font-style:normal;color:var(--teal)}
+  .lede{color:#C7D4DE;font-size:16px;margin:0 0 26px}
+  .cta-row{display:flex;flex-direction:column;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--teal);color:var(--ink);font-family:var(--display);font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:16px 24px;border-radius:10px;box-shadow:0 10px 24px rgba(0,214,180,.18);transition:transform .15s ease,box-shadow .15s ease}
+  .btn:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,214,180,.26)}
+  .btn.ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.28);box-shadow:none;font-size:13px}
+  .btn.ghost:hover{border-color:var(--teal);color:var(--teal)}
+  .micro{font-size:12px;color:var(--steel);margin:14px 0 0}
+  .hero .micro{color:#9FB1BF}
+  .proof{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;padding:0;margin:28px 0 0;font-size:12px;letter-spacing:.04em;color:#C7D4DE}
+  .proof li::before{content:"";display:inline-block;width:7px;height:7px;background:var(--teal);margin-right:8px;transform:rotate(45deg)}
+  .panel{display:none}
+
+  /* ---------- sections ---------- */
+  section{padding:52px 0}
+  section.alt{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .eyebrow.dark{color:#008D77}
+  h2.section{font-family:var(--display);font-size:clamp(24px,5.5vw,34px);line-height:1.15;text-transform:uppercase;letter-spacing:-.4px;margin:0 0 12px}
+  .sub{color:#4A5F72;margin:0 0 26px;max-width:62ch}
+  .grid{display:grid;gap:18px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px 22px;position:relative}
+  .card.featured{border-top:5px solid var(--teal)}
+  .card h3{font-family:var(--display);text-transform:uppercase;font-size:19px;letter-spacing:.02em;margin:0 0 10px}
+  .badge{position:absolute;top:-1px;right:20px;background:var(--teal);color:var(--ink);font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:0 0 7px 7px}
+  .price{font-family:var(--display);font-size:34px;letter-spacing:-1px;margin:6px 0 12px}
+  .price small{display:block;font-family:var(--body);font-size:12px;font-weight:500;letter-spacing:0;color:var(--steel);margin-top:2px}
+  ul.clean{list-style:none;padding:0;margin:0}
+  ul.clean li{position:relative;padding-left:26px;margin:10px 0;color:#41566A;font-size:14px}
+  ul.clean li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;background:var(--teal);border-radius:2px;transform:rotate(45deg)}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;gap:16px;counter-reset:step}
+  .step{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;counter-increment:step}
+  .step h4{font-family:var(--display);text-transform:uppercase;font-size:15px;margin:0 0 8px}
+  .step h4::before{content:"0" counter(step);display:block;font-family:var(--body);font-size:12px;color:var(--teal);letter-spacing:.14em;margin-bottom:8px}
+  .step p{margin:0;color:#4A5F72;font-size:14px}
+
+  /* ---------- payment ---------- */
+  .band{background:var(--ink);color:var(--white);border-radius:18px;padding:30px 24px;position:relative;overflow:hidden}
+  .band::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--teal)}
+  .band h2{font-family:var(--display);text-transform:uppercase;font-size:22px;line-height:1.2;margin:0 0 12px}
+  .band p{color:#C7D4DE;font-size:14px;margin:0 0 20px}
+  .band .btn{font-size:13px}
+  .pay{background:var(--white);border:1px solid var(--line);border-top:5px solid var(--amber);border-radius:16px;padding:26px 22px}
+  .pay h3{font-family:var(--display);text-transform:uppercase;font-size:18px;margin:0 0 12px}
+  .pay p{margin:0 0 14px;color:#3E5468}
+  .pay code{background:var(--cloud);border:1px solid var(--line);border-radius:5px;padding:1px 8px;color:var(--ink);font-size:15px;font-weight:700}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:var(--steel);padding:34px 0 92px;font-size:12px}
+  footer .shell{display:flex;flex-direction:column;gap:12px}
+  footer img{width:190px}
+  footer b{color:var(--white)}
+
+  /* ---------- sticky mobile CTA ---------- */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(11,27,43,.97);border-top:1px solid rgba(0,214,180,.35);padding:10px 16px}
+  .sticky .shell{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .sticky span{font-size:11px;color:#9FB1BF;letter-spacing:.06em;text-transform:uppercase}
+  .sticky .btn{padding:11px 18px;font-size:12px}
+
+  /* ---------- tablet / desktop (mobile-first) ---------- */
+  @media (min-width:720px){
+    .shell{padding:0 32px}
+    .hero{padding:64px 0 86px}
+    .hero-logo{width:300px;margin-bottom:34px}
+    .lede{font-size:18px;max-width:56ch}
+    .cta-row{flex-direction:row;align-items:center}
+    section{padding:76px 0}
+    .grid{grid-template-columns:1fr 1fr;gap:24px}
+    .card{padding:32px 30px}
+    .steps{grid-template-columns:repeat(3,1fr);gap:20px}
+    .band{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:38px 40px}
+    .band h2{font-size:27px}
+    .band p{margin:0;max-width:60ch}
+    .pay{padding:34px 36px}
+    footer .shell{flex-direction:row;align-items:center;justify-content:space-between}
+    .sticky{display:none}
+  }
+  @media (min-width:980px){
+    .hero .shell{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+    .hero-logo{margin-bottom:30px}
+    .panel{display:block;background:rgba(255,255,255,.04);border:1px solid rgba(0,214,180,.22);border-radius:20px;padding:34px;text-align:center}
+    .panel img{width:150px;margin:0 auto 22px}
+    .panel h2{font-family:var(--display);text-transform:uppercase;font-size:17px;line-height:1.3;margin:0 0 8px}
+    .panel p{color:#9FB1BF;font-size:13px;margin:0 0 24px}
+    .stats{display:flex;justify-content:center;gap:26px;border-top:1px solid rgba(255,255,255,.1);padding-top:20px}
+    .stats b{display:block;font-family:var(--display);font-size:24px;color:var(--teal)}
+    .stats span{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel)}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="shell"><span><b>Zentry</b> · Nairobi, Kenya · serving clients worldwide</span><span>Fixed price · No subscription · 48-hour delivery</span></div>
+</div>
+
+<header class="hero" id="top">
+  <div class="shell">
+    <div class="hero-copy">
+      <img class="hero-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMjMwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlplbnRyeSBpbnZlcnNlIGxvZ28gZm9yIGRhcmsgYmFja2dyb3VuZHMiPgogIDx0aXRsZT5aZW50cnkg4oCUIGludmVyc2UgbG9ja3VwIGZvciBkYXJrIGJhY2tncm91bmRzPC90aXRsZT4KICA8cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjIzMCIgZmlsbD0iIzBCMUIyQiIvPgoKICA8IS0tIE1hcms6IHdoaXRlIHNoaWVsZCwgbmF2eSBaIGN1dC1vdXQsIGFtYmVyIHRocmVzaG9sZCAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNCAzMCkiPgogICAgPHBhdGggZD0iTTU4IDQgTDEwOCAyMiBWNzIgQzEwOCAxMDIgODYgMTIyIDU4IDEzNiBDMzAgMTIyIDggMTAyIDggNzIgVjIyIFoiIGZpbGw9IiNGNUY4RkEiLz4KICAgIDxwYXRoIGQ9Ik0zNCA0OCBIODIgTDM0IDEwNCBIODIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBCMUIyQiIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIvPgogICAgPHJlY3QgeD0iNTAiIHk9IjExNCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjYiIHJ4PSIxIiBmaWxsPSIjRkZCMDIwIi8+CiAgPC9nPgoKICA8IS0tIFByaW1hcnkgbG9ja3VwIC0tPgogIDx0ZXh0IHg9IjE3NiIgeT0iMTA0IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI2MiIgZm9udC13ZWlnaHQ9IjcwMCIgbGV0dGVyLXNwYWNpbmc9IjkiIGZpbGw9IiNGNUY4RkEiPlpFTlRSWTwvdGV4dD4KICA8cmVjdCB4PSIxODAiIHk9IjExOCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjUiIGZpbGw9IiMwMEQ2QjQiLz4KICA8dGV4dCB4PSIxODAiIHk9IjE0NiIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxldHRlci1zcGFjaW5nPSIyLjIiIGZpbGw9IiNGNUY4RkEiIG9wYWNpdHk9IjAuNyI+R1VBUkQgVEhFIEVOVFJZLiBNT1ZFIEFUIFNQRUVELjwvdGV4dD4KCiAgPCEtLSBTaW1wbGUgd29yZG1hcmsgdmVyc2lvbiAtLT4KICA8bGluZSB4MT0iMzQiIHkxPSIxNzQiIHgyPSI2MDYiIHkyPSIxNzQiIHN0cm9rZT0iIzdDOEE5QSIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjQiLz4KICA8dGV4dCB4PSIzNCIgeT0iMjA0IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGV0dGVyLXNwYWNpbmc9IjIiIGZpbGw9IiM3QzhBOUEiPldPUkRNQVJLPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMjEyIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgbGV0dGVyLXNwYWNpbmc9IjgiIGZpbGw9IiNGNUY4RkEiPlpFTlRSWTwvdGV4dD4KPC9zdmc+Cg==" alt="Zentry — Guard the entry. Move at speed.">
+      <h1>Look open for business.<em>Even while your site is being built.</em></h1>
+      <p class="lede">A slow, dated or half-finished page costs you enquiries every day. Zentry puts one sharp, mobile-first page in front of your customers — fast, fixed-price, and ready to use.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:jaredkeago07@gmail.com?subject=SAMPLE">Reply SAMPLE →</a>
+        <a class="btn ghost" href="#offers">See the offers</a>
+      </div>
+      <p class="micro">No obligation. I build from what is already online. You approve before anything is published.</p>
+      <ul class="proof"><li>48-hour delivery</li><li>One-off price</li><li>No subscription</li></ul>
+    </div>
+    <div class="panel">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMjMwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlplbnRyeSBmaW5hbCBwcmltYXJ5IGxvZ28iPgogIDx0aXRsZT5aZW50cnkg4oCUIGZpbmFsIHByaW1hcnkgbG9ja3VwIGFuZCB3b3JkbWFyazwvdGl0bGU+CiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSIyMzAiIGZpbGw9IiNGNUY4RkEiLz4KCiAgPCEtLSBNYXJrOiBzZW50aW5lbCBzaGllbGQsIFosIGFtYmVyIHRocmVzaG9sZCAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNCAzMCkiPgogICAgPHBhdGggZD0iTTU4IDQgTDEwOCAyMiBWNzIgQzEwOCAxMDIgODYgMTIyIDU4IDEzNiBDMzAgMTIyIDggMTAyIDggNzIgVjIyIFoiIGZpbGw9IiMwQjFCMkIiLz4KICAgIDxwYXRoIGQ9Ik0zNCA0OCBIODIgTDM0IDEwNCBIODIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwRDZCNCIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIvPgogICAgPHJlY3QgeD0iNTAiIHk9IjExNCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjYiIHJ4PSIxIiBmaWxsPSIjRkZCMDIwIi8+CiAgPC9nPgoKICA8IS0tIFByaW1hcnkgbG9ja3VwIC0tPgogIDx0ZXh0IHg9IjE3NiIgeT0iMTA0IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI2MiIgZm9udC13ZWlnaHQ9IjcwMCIgbGV0dGVyLXNwYWNpbmc9IjkiIGZpbGw9IiMwQjFCMkIiPlpFTlRSWTwvdGV4dD4KICA8cmVjdCB4PSIxODAiIHk9IjExOCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjUiIGZpbGw9IiMwMEQ2QjQiLz4KICA8dGV4dCB4PSIxODAiIHk9IjE0NiIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxldHRlci1zcGFjaW5nPSIyLjIiIGZpbGw9IiM3QzhBOUEiPkdVQVJEIFRIRSBFTlRSWS4gTU9WRSBBVCBTUEVFRC48L3RleHQ+CgogIDwhLS0gU2ltcGxlIHdvcmRtYXJrIHZlcnNpb24gLS0+CiAgPGxpbmUgeDE9IjM0IiB5MT0iMTc0IiB4Mj0iNjA2IiB5Mj0iMTc0IiBzdHJva2U9IiNEOUUyRUEiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjM0IiB5PSIyMDQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBsZXR0ZXItc3BhY2luZz0iMiIgZmlsbD0iIzdDOEE5QSI+V09SRE1BUks8L3RleHQ+CiAgPHRleHQgeD0iMTUwIiB5PSIyMTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iOCIgZmlsbD0iIzBCMUIyQiI+WkVOVFJZPC90ZXh0Pgo8L3N2Zz4K" alt="Zentry shield and wordmark">
+      <h2>The doorway,<br>done right.</h2>
+      <p>One page. One clear action. Built for the phone in your customer's hand.</p>
+      <div class="stats">
+        <div><b>48h</b><span>Launch page</span></div>
+        <div><b>$79</b><span>Fixed price</span></div>
+        <div><b>0</b><span>Subscriptions</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="offers">
+  <div class="shell">
+    <p class="eyebrow dark">What you can buy today</p>
+    <h2 class="section">Two ways to move forward.</h2>
+    <p class="sub">Straight pricing, real delivery times, and a preview before you pay. Built for small businesses and jobseekers anywhere in the world.</p>
+    <div class="grid">
+      <article class="card featured">
+        <span class="badge">Most popular</span>
+        <h3>The Launch Page</h3>
+        <div class="price">US$79<small>one-off · no subscription</small></div>
+        <ul class="clean">
+          <li>One-page, mobile-first website: services, photos, location, hours and reviews</li>
+          <li>Prominent tap-to-call, chat and contact buttons</li>
+          <li>Short enquiry form that sends leads straight to your inbox</li>
+          <li>Matching social media cover graphic</li>
+          <li>Hosting on a fast subdomain with a live link</li>
+          <li>Delivered in 48 hours of details and payment</li>
+        </ul>
+        <p class="micro">24-hour rush US$129 · extra pages, booking links or a second language quoted on request.</p>
+      </article>
+      <article class="card">
+        <h3>Career Express</h3>
+        <div class="price">US$39<small>one-off · same day</small></div>
+        <p class="sub">For the jobseeker who keeps getting filtered out before a human reads the CV.</p>
+        <ul class="clean">
+          <li>ATS-friendly CV rewrite tuned to one real job advert</li>
+          <li>Tailored cover letter that sounds like you, not a template</li>
+          <li>LinkedIn headline and About section that match the role</li>
+          <li>Two revision rounds included</li>
+          <li>Delivered the same day you send your CV and the job link</li>
+        </ul>
+        <p class="micro">6-hour rush US$59.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="shell">
+    <p class="eyebrow dark">How it works</p>
+    <h2 class="section">From “coming soon” to live in three steps.</h2>
+    <div class="steps">
+      <div class="step"><h4>Send your details</h4><p>Reply SAMPLE. I pull what is already on your site and socials — you don't have to write anything.</p></div>
+      <div class="step"><h4>See the preview</h4><p>I build the page and show it to you. Change anything you like. If it isn't right, walk away.</p></div>
+      <div class="step"><h4>Approve and go live</h4><p>Once you approve, payment details follow and the page is published and handed over.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shell">
+    <div class="band">
+      <div>
+        <h2>Built for worldwide clients,<br>priced in US dollars.</h2>
+        <p>Pay by international bank transfer or M-Pesa Till 6200945. Details are sent in your invoice when you confirm. No hidden fees, no recurring charges, no card required.</p>
+      </div>
+      <a class="btn" href="mailto:jaredkeago07@gmail.com?subject=SAMPLE">Start my preview →</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="shell">
+    <p class="eyebrow dark">Payment</p>
+    <h2 class="section">Simple, explicit, secure.</h2>
+    <div class="pay">
+      <h3>How to order</h3>
+      <p>Reply with <b>SAMPLE</b> and I confirm scope, then send payment details in your invoice — international bank transfer or M-Pesa Till <code>6200945</code> (use your phone number as the reference). Bank details are supplied on confirmation.</p>
+      <p class="micro">Questions first? Email <a href="mailto:jaredkeago07@gmail.com">jaredkeago07@gmail.com</a>. I reply within two hours during Nairobi business hours.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="shell">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlplbnRyeSB3b3JkbWFyayI+CiAgPHRpdGxlPlplbnRyeSDigJQgd29yZG1hcmsgb25seSwgdHJhbnNwYXJlbnQgYmFja2dyb3VuZDwvdGl0bGU+CiAgPHRleHQgeD0iMjQiIHk9IjcwIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1NiIgZm9udC13ZWlnaHQ9IjcwMCIgbGV0dGVyLXNwYWNpbmc9IjgiIGZpbGw9IiMwQjFCMkIiPlpFTlRSWTwvdGV4dD4KICA8cmVjdCB4PSIyOCIgeT0iODQiIHdpZHRoPSI2NCIgaGVpZ2h0PSI1IiBmaWxsPSIjMDBENkI0Ii8+CiAgPHRleHQgeD0iMjgiIHk9IjEwNiIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxldHRlci1zcGFjaW5nPSIyIiBmaWxsPSIjN0M4QTlBIj5HVUFSRCBUSEUgRU5UUlkuIE1PVkUgQVQgU1BFRUQuPC90ZXh0Pgo8L3N2Zz4K" alt="Zentry">
+    <span>Guard the entry. Move at speed.<br>Nairobi, Kenya · serving clients worldwide · © 2026</span>
+  </div>
+</footer>
+
+<div class="sticky">
+  <div class="shell"><span>Ready when you are</span><a class="btn" href="mailto:jaredkeago07@gmail.com?subject=SAMPLE">Reply SAMPLE →</a></div>
+</div>
+
+</body>
+</html>
