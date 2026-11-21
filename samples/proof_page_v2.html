@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B1B2B">
+<title>Spurrett Bespoke Eyecare — sample one-page site by Zentry</title>
+<meta name="description" content="Sample one-page site for Spurrett Bespoke Eyecare, Kendal. Built by Zentry from public details. Not published.">
+<!--
+  SAMPLE PREVIEW — proof asset only. NOT PUBLISHED, NOT A LIVE SITE.
+  Built by Zentry (Jared Keago, Nairobi) from public details in outbox\leads_wave5.csv.
+  No external CDNs, fonts, scripts or paid assets. Demo form submits nothing.
+  Brand colours taken exactly from company\brand\brand_kit.md.
+  Phone number and opening hours are ILLUSTRATIVE PLACEHOLDERS (not published in source).
+-->
+<style>
+  :root{
+    --ink:#0B1B2B;        /* Midnight Ink */
+    --teal:#00D6B4;       /* Signal Teal */
+    --amber:#FFB020;      /* Amber Spark — hairline detail only */
+    --steel:#7C8A9A;      /* Steel Grey */
+    --cloud:#F5F8FA;      /* Cloud White */
+    --hairline:#D9E2EA;   /* Hairline */
+    --white:#FFFFFF;
+    --ink-soft:#12283C;
+    --muted:#4A5A6A;
+    --display:"Arial Black",Arial,Helvetica,sans-serif;
+    --body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--cloud);color:var(--ink);
+    font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased;
+  }
+  a{color:#006B5A;text-decoration-thickness:2px;text-underline-offset:3px}
+  a:hover{text-decoration:underline}
+  :focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+  svg{max-width:100%}
+  .wrap{width:100%;max-width:44rem;margin-inline:auto;padding-inline:1.15rem}
+
+  /* demo banner */
+  .demo{
+    background:var(--ink);color:#C9D6E0;text-align:center;
+    font-size:.75rem;line-height:1.45;letter-spacing:.02em;padding:.55rem 1rem;
+  }
+  .demo strong{color:var(--teal)}
+
+  /* header */
+  .site-header{background:var(--ink);color:var(--cloud);border-bottom:3px solid var(--amber)}
+  .header-inner{display:flex;align-items:center;gap:.7rem;min-height:62px;padding-block:.7rem}
+  .brand-mark{flex:none;width:30px;height:36px}
+  .brand-name{
+    font-family:var(--display);font-size:.95rem;text-transform:uppercase;
+    letter-spacing:.06em;overflow-wrap:anywhere;line-height:1.15
+  }
+  .brand-name small{display:block;font:600 .68rem/1.3 var(--body);letter-spacing:.1em;color:var(--steel);text-transform:uppercase}
+
+  /* hero */
+  .hero{background:var(--ink);color:var(--cloud);padding:2.6rem 0 3.4rem}
+  .eyebrow{margin:0 0 .6rem;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+  .hero h1{
+    margin:0;font-family:var(--display);text-transform:uppercase;
+    font-size:clamp(1.7rem,7vw,2.9rem);line-height:1.1;overflow-wrap:anywhere
+  }
+  .hero h1 .accent{display:block;color:var(--teal)}
+  .lede{margin:1rem 0 0;max-width:34rem;color:#C9D6E0;font-size:1.02rem}
+  .actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+    min-height:50px;padding:.8rem 1.15rem;border-radius:.55rem;border:2px solid transparent;
+    font:700 .95rem/1.2 var(--body);text-decoration:none
+  }
+  .btn:hover{text-decoration:none}
+  .btn-call{background:var(--teal);color:var(--ink);flex:1 1 100%}
+  .btn-call:hover{background:#2EE3C5}
+  .btn-ghost{background:transparent;border-color:var(--steel);color:var(--cloud)}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+  .badge{
+    display:inline-block;margin-top:1.4rem;padding:.35rem .7rem;border:1px solid rgba(255,255,255,.24);
+    border-radius:999px;color:#9FB1BF;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase
+  }
+
+  /* content cards */
+  main{padding-block:1.6rem 2.4rem}
+  .card{
+    background:var(--white);border:1px solid var(--hairline);border-top:4px solid var(--teal);
+    border-radius:.75rem;padding:1.4rem;margin-bottom:1.1rem
+  }
+  .card h2{
+    margin:0 0 .9rem;font-family:var(--display);text-transform:uppercase;
+    font-size:1.2rem;letter-spacing:.01em
+  }
+  .card .sub{margin:-.5rem 0 1rem;color:var(--muted);font-size:.85rem}
+  .services{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
+  .services li{
+    padding:.8rem .9rem;background:var(--cloud);border:1px solid var(--hairline);
+    border-radius:.55rem;font-weight:600;font-size:.95rem
+  }
+  .services li::before{content:"";display:inline-block;width:.55rem;height:.55rem;background:var(--teal);border-radius:50%;margin-right:.7rem;vertical-align:middle}
+
+  /* hours */
+  .hours{margin:0;width:100%;border-collapse:collapse;font-size:.95rem}
+  .hours th,.hours td{padding:.5rem .25rem;border-bottom:1px solid var(--hairline);text-align:left}
+  .hours th{font-weight:600}
+  .hours td{text-align:right;color:var(--muted)}
+  .hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+
+  /* contact lines */
+  .lines{margin:0}
+  .lines p{margin:0 0 .6rem}
+  .lines .label{display:block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+  .lines a.big{font-size:1.15rem;font-weight:700}
+  .tiny{display:block;margin-top:.8rem;font-size:.75rem;color:var(--steel)}
+
+  /* form */
+  label{display:block;font-size:.82rem;font-weight:700;color:var(--muted);margin:.85rem 0 .35rem}
+  input,textarea{
+    width:100%;padding:.75rem .8rem;border:1px solid var(--hairline);border-radius:.55rem;
+    font:inherit;background:var(--cloud);color:var(--ink)
+  }
+  textarea{resize:vertical}
+  button{
+    margin-top:1rem;width:100%;min-height:50px;padding:.8rem;border:0;border-radius:.55rem;
+    background:var(--teal);color:var(--ink);font:inherit;font-weight:800;cursor:pointer
+  }
+  .note{margin:.7rem 0 0;font-size:.75rem;color:var(--steel);text-align:center}
+
+  /* footer */
+  footer{background:#08131F;color:#9FB1BF;text-align:center;font-size:.75rem;padding:1.4rem 1rem 1.8rem}
+  footer .foot-mark{width:34px;height:40px;margin:0 auto .6rem;display:block}
+  footer b{color:var(--cloud);font-family:var(--display);letter-spacing:.06em}
+  footer .tagline{color:var(--teal);font-weight:700}
+  footer p{margin:.35rem 0 0}
+
+  @media (min-width:34rem){
+    .btn-call{flex:0 0 auto}
+    .wrap{padding-inline:1.5rem}
+    .hero{padding:3.4rem 0 4rem}
+    .card{padding:1.7rem 1.8rem}
+    .services{grid-template-columns:1fr 1fr}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <strong>SAMPLE PREVIEW — NOT PUBLISHED.</strong> Built by Zentry from public details. Phone number and opening hours are illustrative placeholders — replace with the practice's real details before publishing.
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <svg class="brand-mark" viewBox="0 0 44 52" aria-hidden="true" focusable="false">
+      <path d="M22 2 42 10v18c0 12-8.6 19.4-20 22C10.6 47.4 2 40 2 28V10L22 2Z" fill="#0B1B2B" stroke="#00D6B4" stroke-width="2.5"/>
+      <path d="M12 16h20l-14 12h14l-20 12 8-12h-8l10-12Z" fill="#00D6B4"/>
+      <rect x="16" y="46" width="12" height="2.5" fill="#FFB020"/>
+    </svg>
+    <div class="brand-name">Spurrett Bespoke Eyecare<small>Kendal · Cumbria</small></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <p class="eyebrow">A new website is on its way</p>
+      <h1 id="hero-title">Bespoke eyecare<span class="accent">in Kendal.</span></h1>
+      <p class="lede">Until the full site is ready, call or send a short enquiry and we'll help you book an eye test, choose new frames or ask about contact lenses.</p>
+      <div class="actions">
+        <a class="btn btn-call" href="tel:+441539000000">Call 01539 000 000</a>
+        <a class="btn btn-ghost" href="#enquiry">Send an enquiry</a>
+      </div>
+      <span class="badge">Sample one-pager · Zentry</span>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <section class="card" aria-labelledby="services-title">
+      <h2 id="services-title">What we do</h2>
+      <p class="sub">Illustrative list for an eyecare practice — confirm the exact services before publishing.</p>
+      <ul class="services">
+        <li>Eye examinations</li>
+        <li>Glasses &amp; frames</li>
+        <li>Contact lenses</li>
+        <li>Sunglasses &amp; lenses</li>
+        <li>Children's eyecare</li>
+        <li>Contact lens checks</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="hours-title">
+      <h2 id="hours-title">Opening hours</h2>
+      <p class="sub">Illustrative hours — replace with the practice's real opening times.</p>
+      <table class="hours">
+        <tbody>
+          <tr><th scope="row">Monday – Friday</th><td>9:00 – 17:30</td></tr>
+          <tr><th scope="row">Saturday</th><td>9:00 – 13:00</td></tr>
+          <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="enquiry" aria-labelledby="enquiry-title">
+      <h2 id="enquiry-title">Send an enquiry</h2>
+      <form onsubmit="return false" aria-label="Demo enquiry form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="Your phone number" autocomplete="tel">
+        <label for="msg">Message</label>
+        <textarea id="msg" name="msg" rows="3" placeholder="How can we help?"></textarea>
+        <button type="submit">Send enquiry</button>
+        <p class="note">Demo form — nothing is sent from this sample.</p>
+      </form>
+    </section>
+
+    <section class="card" aria-labelledby="find-title">
+      <h2 id="find-title">Find us &amp; get in touch</h2>
+      <div class="lines">
+        <p>
+          <span class="label">Address</span>
+          90 Stricklandgate, Kendal, Cumbria
+        </p>
+        <p>
+          <span class="label">Email</span>
+          <a href="mailto:kendal@spurrett.co.uk">kendal@spurrett.co.uk</a>
+        </p>
+        <p>
+          <span class="label">Phone (illustrative — tap to call)</span>
+          <a class="big" href="tel:+441539000000">01539 000 000</a>
+        </p>
+      </div>
+      <span class="tiny">Address and email are from the practice's own public details. Phone number is a placeholder.</span>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <svg class="foot-mark" viewBox="0 0 44 52" aria-hidden="true" focusable="false">
+    <path d="M22 2 42 10v18c0 12-8.6 19.4-20 22C10.6 47.4 2 40 2 28V10L22 2Z" fill="#0B1B2B" stroke="#00D6B4" stroke-width="2.5"/>
+    <path d="M12 16h20l-14 12h14l-20 12 8-12h-8l10-12Z" fill="#00D6B4"/>
+    <rect x="16" y="46" width="12" height="2.5" fill="#FFB020"/>
+  </svg>
+  <p><b>Zentry</b> · <span class="tagline">Guard the entry. Move at speed.</span></p>
+  <p>Sample one-pager for Spurrett Bespoke Eyecare · not published · built by Zentry, Nairobi.</p>
+</footer>
+
+</body>
+</html>
