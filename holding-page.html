@@ -1,71 +1,216 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>When your website says "coming soon" — Zentry</title>
-<meta name="description" content="A practical guide for dental practices, plumbers and clinics whose website says coming soon. What to put on a holding page so visitors can still call and enquire.">
-<meta name="author" content="Zentry">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="canonical" href="https://jaredatandi.github.io/zentry-site/holding-page.html">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Zentry">
-<meta property="og:title" content="When your website says &quot;coming soon&quot; — Zentry">
-<meta property="og:description" content="What a holding page must contain so visitors can still call and enquire — a short, practical checklist.">
-<meta property="og:url" content="https://jaredatandi.github.io/zentry-site/holding-page.html">
-<meta property="og:image" content="https://jaredatandi.github.io/zentry-site/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Zentry — software engineering and cybersecurity">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="When your website says &quot;coming soon&quot; — Zentry">
-<meta name="twitter:description" content="What a holding page must contain so visitors can still call and enquire.">
-<meta name="twitter:image" content="https://jaredatandi.github.io/zentry-site/assets/og-image.png">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B1B2B">
+<title>Zentry — Your one-page site, built in 48 hours</title>
+<meta name="description" content="Zentry builds mobile-first one-page sites for local businesses. See a finished sample, exact prices, and pay by bank transfer or M-Pesa Paybill/Till 6200945.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 52'%3E%3Cpath d='M22 2 42 10v18c0 12-8.6 19.4-20 22C10.6 47.4 2 40 2 28V10L22 2Z' fill='%230B1B2B' stroke='%2300D6B4' stroke-width='2.5'/%3E%3Cpath d='M12 16h20l-14 12h14l-20 12 8-12h-8l10-12Z' fill='%2300D6B4'/%3E%3C/svg%3E">
 <style>
-:root{--ink:#17252b;--muted:#5d6d74;--brand:#0d7a86;--brand2:#07525c;--bg:#f2f8f8;--card:#fff;--line:#d8e7e7}
-*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-header{background:var(--brand2);color:#fff;padding:30px 20px 38px}
-header .wrap{max-width:760px;margin:auto}header a{color:#bfe4e6}
-h1{font-size:28px;line-height:1.25;margin:0 0 8px}h2{font-size:21px;margin:32px 0 8px;color:var(--brand2)}
-.wrap{max-width:760px;margin:auto;padding:26px 20px 60px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:18px 0}
-ul{padding-left:22px}li{margin:7px 0}
-.tag{display:inline-block;background:#d3eff0;color:var(--brand2);font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px;letter-spacing:.03em}
-a.btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;padding:11px 18px;border-radius:8px;font-weight:600;margin:6px 6px 0 0}
-.small{font-size:14px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:18px 20px;text-align:center;font-size:14px;color:var(--muted)}
-</style></head><body>
-<header><div class="wrap"><span class="tag">Zentry field guide</span><h1>Your website says "coming soon". Now what?</h1>
-<p class="small" style="color:#bfe4e6">A short, practical checklist for practices whose new site is still being built — and who still need the phone to ring.</p>
-<p class="small" style="color:#bfe4e6"><a href="./">← Back to Zentry</a></p></div></header>
-<div class="wrap">
-<div class="card">
-<p>If your site is a holding page, a visitor has usually made up their mind in about five seconds. They either find a way to contact you, or they leave. A "coming soon" banner with nothing underneath reads as "not open yet" — even when you are taking bookings today.</p>
-<p><strong>The fix is not a full website.</strong> It is one clear page that answers four questions: who you are, where you are, how to reach you right now, and what to do next.</p>
+  :root{
+    --navy:#0B1B2B; --teal:#00D6B4; --amber:#FFB020; --steel:#7C8A9A;
+    --cloud:#F5F8FA; --line:#D9E2EA; --ink:#0B1B2B; --white:#fff;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;padding-bottom:86px;background:var(--cloud);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#007F6A}
+  a:hover{text-decoration:underline}
+  :focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+  svg{max-width:100%}
+  .wrap{width:100%;max-width:900px;margin:0 auto;padding:0 18px}
+
+  header.top{background:var(--navy);color:#fff;padding:16px 0;border-bottom:3px solid var(--amber)}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand svg{width:26px;height:31px;flex:none}
+  .brand b{font-size:20px;font-weight:800;letter-spacing:.03em;line-height:1}
+  .brand b i{font-style:normal;color:var(--teal)}
+  .brand .tag{margin:3px 0 0;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#9FB1BF}
+
+  .hero{background:var(--navy);color:#fff;padding:34px 0 32px}
+  .eyebrow{margin:0 0 10px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+  h1{margin:0 0 14px;font-size:clamp(28px,7vw,42px);line-height:1.12;letter-spacing:-.02em;max-width:20ch}
+  h1 em{font-style:normal;color:var(--teal)}
+  .lede{margin:0 0 22px;color:#C9D6E0;font-size:16px;max-width:46ch}
+  .cta{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    width:100%;max-width:430px;min-height:54px;padding:14px 22px;
+    background:var(--teal);color:#04231E;border-radius:8px;
+    font:800 16px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    text-decoration:none;border:0;cursor:pointer
+  }
+  .cta:hover{background:#2EE3C5;text-decoration:none}
+  .cta svg{width:18px;height:18px;flex:none}
+  .micro{margin:10px 0 0;color:#9FB1BF;font-size:12px}
+
+  main{padding-top:6px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px;margin:18px 0}
+  .card h2{margin:0 0 8px;font-size:20px;line-height:1.25}
+  .card p{margin:0 0 10px;color:#415466}
+  .card p:last-child{margin-bottom:0}
+  .kicker{margin:0 0 8px;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#008D77}
+  .frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;margin:14px 0}
+  .frame iframe{display:block;width:100%;height:420px;border:0}
+  .caption{font-size:12px;color:var(--steel);margin:8px 0 0}
+  .open{display:inline-block;margin-top:12px;font-weight:700}
+
+  .grid{display:grid;gap:14px}
+  .price{font-size:26px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+  .price span{display:block;font-size:12px;font-weight:600;color:var(--steel);letter-spacing:0;margin-top:2px}
+  .tier{border-top:4px solid var(--teal)}
+  .tier.alt{border-top-color:var(--amber)}
+  ul{margin:10px 0 0;padding-left:20px;color:#415466}
+  li{margin:6px 0;font-size:14px}
+  .rush{font-size:13px;color:#415466;margin-top:12px}
+
+  .pay{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:12px;padding:20px;margin:18px 0}
+  .pay dl{margin:0}
+  .pay dt{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#008D77;margin:14px 0 3px}
+  .pay dt:first-child{margin-top:0}
+  .pay dd{margin:0;color:#415466}
+  code{background:var(--cloud);border:1px solid var(--line);padding:2px 7px;border-radius:5px;font-weight:700;color:var(--ink)}
+  .lines{margin:0}
+  .lines p{margin:0 0 12px}
+  .lines p:last-child{margin-bottom:0}
+  .lines .l{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#008D77}
+  .lines a,.lines strong{font-size:17px;font-weight:700;overflow-wrap:anywhere}
+  .fine{font-size:12px;color:var(--steel);margin:14px 0 0}
+
+  footer{background:#08131F;color:#8FA1B2;padding:26px 0 34px;font-size:13px;text-align:center}
+  footer b{color:#fff}
+  footer .tag{color:var(--teal);font-weight:700;margin:6px 0 0}
+  footer p{margin:5px 0}
+
+  .sticky{position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--navy);border-top:1px solid rgba(255,255,255,.14);padding:10px 16px}
+  .sticky .cta{max-width:none;width:100%;min-height:48px;padding:10px 16px;font-size:15px}
+
+  @media (min-width:720px){
+    .wrap{padding:0 24px}
+    .hero{padding:56px 0 52px}
+    .card,.pay{padding:26px 28px}
+    .grid{grid-template-columns:1fr 1fr}
+    .frame iframe{height:660px}
+    .cta{width:auto}
+    .sticky{display:none}
+    body{padding-bottom:0}
+    main{padding-top:14px}
+    footer{text-align:left}
+    footer .inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 44 52" aria-label="Zentry shield" role="img">
+        <path d="M22 2 42 10v18c0 12-8.6 19.4-20 22C10.6 47.4 2 40 2 28V10L22 2Z" fill="#0B1B2B" stroke="#00D6B4" stroke-width="2.5"/>
+        <path d="M12 16h20l-14 12h14l-20 12 8-12h-8l10-12Z" fill="#00D6B4"/>
+        <rect x="16" y="46" width="12" height="2.5" fill="#FFB020"/>
+      </svg>
+      <div><b>ZENTRY<i>.</i></b><p class="tag">Guard the entry. Move at speed.</p></div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Zentry · Nairobi · fixed-price web + career pack</p>
+    <h1>Your page is ready in <em>48 hours.</em></h1>
+    <p class="lede">We build one focused, mobile-first page that turns visitors into WhatsApp enquiries. Before you decide, we send you a finished sample free — no card, no subscription, no pressure.</p>
+    <a class="cta" href="https://wa.me/254701074998?text=Hi%20Zentry%2C%20please%20send%20me%20a%20free%20sample%20one-page%20site%20for%20my%20business.">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.3A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+      Get a free sample
+    </a>
+    <p class="micro">Message us on WhatsApp, or call +254 701 074 998.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section class="card" aria-labelledby="proof-title">
+      <p class="kicker">Proof — not promises</p>
+      <h2 id="proof-title">This is what you get.</h2>
+      <p>A genuinely finished one-page site built by Zentry: mobile layout, services, opening hours, enquiry form and a click-to-call button. Open it and scroll — that is the standard your page is built to.</p>
+      <div class="frame">
+        <iframe src="samples/proof_page_v2.html" title="Finished sample one-page site built by Zentry" loading="lazy"></iframe>
+      </div>
+      <p class="caption">Sample preview built from public details. Phone number and opening hours in the sample are illustrative placeholders, not published client data.</p>
+      <a class="open" href="samples/proof_page_v2.html" target="_blank" rel="noopener">Open the full sample in a new tab &rarr;</a>
+    </section>
+
+    <section class="card" aria-labelledby="price-title">
+      <p class="kicker">Exact prices</p>
+      <h2 id="price-title">Two fixed prices. Nothing hidden.</h2>
+      <div class="grid">
+        <div class="card tier" style="margin:0">
+          <h3 style="margin:0 0 6px;font-size:17px">The Launch Page</h3>
+          <div class="price">US$79<span>one-off · Kenya clients: KES 2,500</span></div>
+          <ul>
+            <li>Mobile-first one-page site: services, photos, location and hours</li>
+            <li>WhatsApp click-to-chat, call button and enquiry form</li>
+            <li>Matching social media cover graphic</li>
+            <li>Live link on a fast, secure host — yours to keep</li>
+            <li>Delivered in 48 hours of details and payment</li>
+          </ul>
+          <p class="rush">24-hour rush: US$129 / KES 3,500.</p>
+        </div>
+        <div class="card tier alt" style="margin:0">
+          <h3 style="margin:0 0 6px;font-size:17px">Career Express</h3>
+          <div class="price">US$39<span>one-off · Kenya clients: KES 1,000</span></div>
+          <ul>
+            <li>ATS-friendly CV rewrite tailored to one job advert</li>
+            <li>Matching tailored cover letter</li>
+            <li>LinkedIn headline + About section</li>
+            <li>Two revision rounds included</li>
+            <li>Same-day delivery once we have your CV and the job link</li>
+          </ul>
+          <p class="rush">6-hour rush: US$59 / KES 1,500.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pay" aria-labelledby="pay-title">
+      <h2 id="pay-title" style="margin:0 0 12px;font-size:20px">How to pay</h2>
+      <dl>
+        <dt>International bank transfer</dt>
+        <dd>Bank details are supplied on confirmation. We never publish or guess them — message us first and we send the exact details.</dd>
+        <dt>Kenya — M-Pesa</dt>
+        <dd>Paybill / Till <code>6200945</code>. Use <strong>your own phone number</strong> as the account reference, then send us your business name, services, town, WhatsApp number and 2–4 photos.</dd>
+      </dl>
+      <p class="fine">No subscriptions, no hidden charges. If the finished page is not what was agreed, we fix it before handover. Work starts once payment is confirmed.</p>
+    </section>
+
+    <section class="card" aria-labelledby="contact-title">
+      <p class="kicker">Contact</p>
+      <h2 id="contact-title">Message us on WhatsApp.</h2>
+      <div class="lines">
+        <p><span class="l">WhatsApp / call</span><a href="tel:+254701074998">+254 701 074 998</a></p>
+        <p><span class="l">Email</span><a href="mailto:jaredkeago07@gmail.com">jaredkeago07@gmail.com</a></p>
+        <p><span class="l">Based in</span><strong>Nairobi, Kenya</strong></p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap inner">
+    <div><b>Zentry</b> · Jared Keago, Nairobi<br><p class="tag">Guard the entry. Move at speed.</p></div>
+    <p>Sample work shown for illustration. No invented testimonials — judge the work itself.</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="cta" href="https://wa.me/254701074998?text=Hi%20Zentry%2C%20please%20send%20me%20a%20free%20sample%20one-page%20site%20for%20my%20business.">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.3A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+    Get a free sample
+  </a>
 </div>
-<h2>What a holding page must contain</h2>
-<div class="card"><ul>
-<li><strong>Your name and what you do</strong> — one line, no jargon. "Family dentistry in Basingstoke" beats "exceptional dentistry, beautifully personal" when someone is looking for a phone number.</li>
-<li><strong>A tappable phone number</strong> — on a phone, a number must be a link that opens the dialler, not text someone has to select.</li>
-<li><strong>Your address</strong> — with the postcode. People check distance before they call.</li>
-<li><strong>One action</strong> — a short enquiry form (name, contact, message) or a Book button. Not both competing for attention.</li>
-<li><strong>An honest line about the new site</strong> — "Our new website is on its way. In the meantime, call or send a short enquiry and we'll get straight back to you."</li>
-</ul></div>
-<h2>Three mistakes that cost enquiries</h2>
-<div class="card"><ul>
-<li><strong>Banner plus half-built pages.</strong> A "coming soon" banner sitting above live service pages sends two messages at once. Pick one story.</li>
-<li><strong>Email only.</strong> "Please email us" loses the people who want to speak to a human now.</li>
-<li><strong>No next step on mobile.</strong> If the call button is not tappable and the form has five fields, the visitor bounces.</li>
-</ul></div>
-<h2>See a finished example</h2>
-<div class="card">
-<p>We built a complete demo holding page — a fictional dental practice — so you can see exactly what this looks like on a phone before deciding anything.</p>
-<a class="btn" href="./example.html">View the live example →</a>
-</div>
-<h2>If you'd rather not build it yourself</h2>
-<div class="card">
-<p>Zentry builds a one-page mobile site like that demo — tap-to-call, address, short enquiry form — from details that are already public about your business. 48 hours, US$79. Bank transfer worldwide; M-Pesa Till 6200945 for clients in Kenya. No subscription, no ongoing fee.</p>
-<p>Email <a href="mailto:jaredkeago07@gmail.com">jaredkeago07@gmail.com</a> or WhatsApp/call +254 701 074 998 and say "holding page". We'll send the example page and a quote — no obligation.</p>
-<a class="btn" href="mailto:jaredkeago07@gmail.com?subject=Holding%20page%20quote">Request the example and quote</a>
-</div>
-</div>
-<footer>Guard the entry. Move at speed. · Zentry · <a href="./">Home</a></footer>
-</body></html>
+
+</body>
+</html>
