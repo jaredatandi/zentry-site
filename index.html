@@ -3,388 +3,220 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zentry — Software Engineering &amp; Cybersecurity</title>
-<meta name="description" content="Zentry is a software engineering and cybersecurity company. We build web, mobile and cloud software and secure it with application security, penetration testing and DevSecOps.">
 <meta name="theme-color" content="#0B1B2B">
-<meta name="author" content="Zentry">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="canonical" href="https://jaredatandi.github.io/zentry-site/">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Zentry">
-<meta property="og:title" content="Zentry — Software Engineering &amp; Cybersecurity">
-<meta property="og:description" content="We design and build web, mobile and cloud products — then test the assumptions that keep them safe after launch.">
-<meta property="og:url" content="https://jaredatandi.github.io/zentry-site/">
-<meta property="og:image" content="https://jaredatandi.github.io/zentry-site/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Zentry — software engineering and cybersecurity">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Zentry — Software Engineering &amp; Cybersecurity">
-<meta name="twitter:description" content="Software that holds up. Systems that stay safe.">
-<meta name="twitter:image" content="https://jaredatandi.github.io/zentry-site/assets/og-image.png">
-<meta name="twitter:image:alt" content="Zentry — software engineering and cybersecurity">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B1B2B'/%3E%3Cpath d='M32 9 53 17v16c0 13-9 20-21 23C20 53 11 46 11 33V17Z' fill='none' stroke='%2300D6B4' stroke-width='4'/%3E%3Cpath d='M22 25h20L22 41h20' fill='none' stroke='%2300D6B4' stroke-width='5'/%3E%3C/svg%3E">
+<title>Zentry — Get a free sample of your one-page site</title>
+<meta name="description" content="Zentry builds fast, mobile-first one-page sites. See a finished sample, exact prices, and pay by bank transfer or M-Pesa Paybill/Till 6200945.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 52'%3E%3Cpath d='M22 2 42 10v18c0 12-8.6 19.4-20 22C10.6 47.4 2 40 2 28V10L22 2Z' fill='%230B1B2B' stroke='%2300D6B4' stroke-width='2.5'/%3E%3Cpath d='M12 16h20l-14 12h14l-20 12 8-12h-8l10-12Z' fill='%2300D6B4'/%3E%3C/svg%3E">
 <style>
   :root{
-    --navy:#0B1B2B; --navy2:#132A3E; --ink:#102434; --muted:#5A6E80;
-    --teal:#00B99B; --teal-b:#00D6B4; --line:#E2E9EF; --bg:#F6F9FB; --white:#fff;
-    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --navy:#0B1B2B; --navy2:#132A3E; --teal:#00D6B4; --amber:#FFB020;
+    --steel:#7C8A9A; --cloud:#F5F8FA; --line:#D9E2EA; --ink:#0B1B2B; --white:#fff;
   }
   *,*::before,*::after{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--white);color:var(--ink);font:16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
-  a{color:var(--teal);text-decoration:none}
+  body{margin:0;padding-bottom:86px;background:var(--cloud);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#007F6A}
   a:hover{text-decoration:underline}
-  svg{max-width:100%}
   :focus-visible{outline:3px solid var(--teal);outline-offset:3px}
-  .shell{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
-  .narrow{width:100%;max-width:900px;margin:0 auto;padding:0 24px}
+  svg{max-width:100%}
+  .wrap{width:100%;max-width:900px;margin:0 auto;padding:0 18px}
 
-  /* buttons */
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--teal-b);color:#04231E;font-weight:700;font-size:14px;padding:13px 22px;border-radius:8px;transition:transform .15s ease,background .15s ease;white-space:nowrap}
-  .btn:hover{text-decoration:none;transform:translateY(-2px);background:#2ee3c5}
-  .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28)}
-  .btn.ghost:hover{border-color:var(--teal-b);color:var(--teal-b)}
-  .btn.sm{padding:10px 17px;font-size:13px}
-
-  /* nav */
-  .nav{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08)}
-  .nav .shell{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}
-  .logo{display:flex;align-items:center;gap:10px;color:#fff;flex:none}
-  .logo:hover{text-decoration:none}
-  .logo svg{width:24px;height:29px}
-  .logo .word{font-size:21px;font-weight:800;letter-spacing:-.02em;line-height:1}
-  .logo .word i{font-style:normal;color:var(--teal-b)}
-  .nav-links{display:none;align-items:center;gap:30px}
-  .nav-links a{color:#B7C6D3;font-size:14px;font-weight:500}
-  .nav-links a:hover{color:var(--teal-b);text-decoration:none}
-  .nav-cta{display:none}
-  .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.2);border-radius:7px;background:transparent;color:#fff;cursor:pointer}
-  .menu-btn svg{width:20px;height:20px}
-  .m-menu{display:none;padding:8px 24px 18px;background:var(--navy);border-top:1px solid rgba(255,255,255,.08)}
-  .m-menu.open{display:block}
-  .m-menu a{display:block;color:#B7C6D3;padding:11px 0;font-size:14px;border-bottom:1px solid rgba(255,255,255,.07)}
-  .m-menu .btn{margin-top:16px;width:100%}
+  /* masthead */
+  header.top{background:var(--navy);color:#fff;padding:16px 0;border-bottom:3px solid var(--amber)}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand svg{width:26px;height:31px;flex:none}
+  .brand b{font-size:20px;font-weight:800;letter-spacing:.03em;line-height:1}
+  .brand b i{font-style:normal;color:var(--teal)}
+  .brand .tag{margin:3px 0 0;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#9FB1BF}
 
   /* hero */
-  .hero{background:radial-gradient(820px 420px at 88% -12%,#163B53 0%,var(--navy) 55%);color:#fff;padding:64px 0 72px;position:relative;overflow:hidden}
-  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:linear-gradient(#000,transparent 88%);mask-image:linear-gradient(#000,transparent 88%)}
-  .hero .shell{position:relative;z-index:1}
-  .overline{margin:0 0 18px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-b)}
-  h1{font-size:clamp(32px,5.6vw,52px);line-height:1.1;letter-spacing:-.025em;font-weight:750;margin:0 0 20px;max-width:18ch}
-  h1 em{font-style:normal;color:var(--teal-b)}
-  .lede{color:#C1D0DC;font-size:17px;max-width:56ch;margin:0 0 30px}
-  .cta-row{display:flex;flex-wrap:wrap;gap:12px}
-  .hero-contact{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
-  .hero-contact a{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:600;font-size:14px}
-  .hero-contact a:hover{color:var(--teal-b);text-decoration:none}
-  .hero-contact svg{width:17px;height:17px;color:var(--teal-b);flex:none}
-
-  /* hero panel */
-  .panel{display:none}
-  .panel .card{background:rgba(255,255,255,.045);border:1px solid rgba(0,214,180,.2);border-radius:16px;padding:30px}
-  .panel .grid-mark{display:flex;gap:10px;margin-bottom:26px}
-  .panel .grid-mark i{height:5px;border-radius:4px;background:var(--teal-b);opacity:.85}
-  .panel .grid-mark i:nth-child(1){width:34px}
-  .panel .grid-mark i:nth-child(2){width:12px;opacity:.4}
-  .panel .grid-mark i:nth-child(3){width:20px;opacity:.6}
-  .matrix{display:grid;gap:0}
-  .matrix .r{display:grid;grid-template-columns:78px 1fr;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.1);align-items:start}
-  .matrix .r:first-child{border-top:0}
-  .matrix .k{font-size:10px;font-weight:800;letter-spacing:.14em;color:var(--teal-b);text-transform:uppercase;padding-top:4px}
-  .matrix .v{color:#D5E0E9;font-size:13px;line-height:1.6}
-  .matrix .v b{color:#fff;font-weight:600}
-
-  /* focus strip */
-  .focus{background:var(--bg);border-bottom:1px solid var(--line)}
-  .focus .shell{display:grid;grid-template-columns:1fr;gap:0}
-  .f-item{display:flex;gap:14px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--line)}
-  .f-item:last-child{border-bottom:0}
-  .f-item svg{width:22px;height:22px;color:var(--teal);flex:none;margin-top:3px}
-  .f-item b{display:block;font-size:14px;margin-bottom:3px}
-  .f-item span{display:block;color:var(--muted);font-size:13px;line-height:1.5}
+  .hero{background:radial-gradient(700px 320px at 90% -10%,#173D55 0%,var(--navy) 60%);color:#fff;padding:34px 0 32px}
+  .eyebrow{margin:0 0 10px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+  h1{margin:0 0 14px;font-size:clamp(28px,7vw,44px);line-height:1.12;letter-spacing:-.02em;max-width:19ch}
+  h1 em{font-style:normal;color:var(--teal)}
+  .lede{margin:0 0 22px;color:#C9D6E0;font-size:16px;max-width:46ch}
+  .cta{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    width:100%;max-width:430px;min-height:54px;padding:14px 22px;
+    background:var(--teal);color:#04231E;border-radius:8px;
+    font:800 16px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    text-decoration:none;border:0;cursor:pointer
+  }
+  .cta:hover{background:#2EE3C5;text-decoration:none}
+  .cta svg{width:18px;height:18px;flex:none}
+  .micro{margin:10px 0 0;color:#9FB1BF;font-size:12px}
 
   /* sections */
-  section{padding:70px 0}
-  .eyebrow{margin:0 0 12px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
-  h2.sec{font-size:clamp(26px,4.4vw,38px);font-weight:750;letter-spacing:-.025em;line-height:1.15;margin:0 0 14px}
-  .intro{color:var(--muted);font-size:16px;max-width:64ch;margin:0 0 36px}
+  main{padding-top:6px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px;margin:18px 0}
+  .card h2{margin:0 0 8px;font-size:20px;line-height:1.25}
+  .card p{margin:0 0 10px;color:#415466}
+  .card p:last-child{margin-bottom:0}
+  .kicker{margin:0 0 8px;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#008D77}
+  .frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;margin:14px 0}
+  .frame iframe{display:block;width:100%;height:420px;border:0}
+  .caption{font-size:12px;color:var(--steel);margin:8px 0 0}
+  .open{display:inline-block;margin-top:12px;font-weight:700}
 
-  /* services */
-  .svc-grid{display:grid;gap:20px}
-  .svc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:box-shadow .2s ease,transform .2s ease}
-  .svc:hover{box-shadow:0 16px 40px rgba(16,36,52,.07);transform:translateY(-2px)}
-  .svc .idx{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--teal)}
-  .svc.sec2 .idx{color:#C98A10}
-  .svc h3{font-size:21px;font-weight:750;letter-spacing:-.01em;margin:12px 0 8px}
-  .svc .desc{color:var(--muted);font-size:14px;margin:0 0 22px}
-  .svc ul{list-style:none;padding:0;margin:0}
-  .svc li{position:relative;padding-left:22px;margin:10px 0;font-size:14px;color:#35495C}
-  .svc li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--teal);transform:rotate(45deg)}
-  .svc.sec2 li::before{background:#E0A11A}
+  /* prices */
+  .grid{display:grid;gap:14px}
+  .price{font-size:26px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+  .price span{display:block;font-size:12px;font-weight:600;color:var(--steel);letter-spacing:0;margin-top:2px}
+  .tier{border-top:4px solid var(--teal)}
+  .tier.alt{border-top-color:var(--amber)}
+  ul{margin:10px 0 0;padding-left:20px;color:#415466}
+  li{margin:6px 0;font-size:14px}
+  .rush{font-size:13px;color:#415466;margin-top:12px}
 
-  /* approach */
-  .approach{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .pillar{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
-  .pillar .n{font-size:12px;font-weight:800;color:var(--teal);letter-spacing:.12em}
-  .pillar h4{font-size:17px;margin:10px 0 8px;font-weight:700}
-  .pillar p{margin:0;color:var(--muted);font-size:14px}
-  .pillars{display:grid;gap:16px}
+  /* payment + contact */
+  .pay{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:12px;padding:20px;margin:18px 0}
+  .pay dl{margin:0}
+  .pay dt{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#008D77;margin:14px 0 3px}
+  .pay dt:first-child{margin-top:0}
+  .pay dd{margin:0;color:#415466}
+  code{background:var(--cloud);border:1px solid var(--line);padding:2px 7px;border-radius:5px;font-weight:700;color:var(--ink)}
+  .lines{margin:0}
+  .lines p{margin:0 0 12px}
+  .lines p:last-child{margin-bottom:0}
+  .lines .l{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#008D77}
+  .lines a,.lines strong{font-size:17px;font-weight:700;overflow-wrap:anywhere}
+  .fine{font-size:12px;color:var(--steel);margin:14px 0 0}
 
-  /* process */
-  .steps{display:grid;gap:18px;counter-reset:s}
-  .step{padding-top:18px;border-top:2px solid var(--line);counter-increment:s}
-  .step::before{content:"0" counter(s);display:block;font-size:12px;font-weight:800;color:var(--teal);letter-spacing:.12em;margin-bottom:12px}
-  .step h4{margin:0 0 8px;font-size:16px;font-weight:700}
-  .step p{margin:0;color:var(--muted);font-size:14px}
+  footer{background:#08131F;color:#8FA1B2;padding:26px 0 34px;font-size:13px;text-align:center}
+  footer b{color:#fff}
+  footer .tag{color:var(--teal);font-weight:700;margin:6px 0 0}
+  footer p{margin:5px 0}
 
-  /* ethics */
-  .ethics{background:var(--navy);color:#fff;border-radius:16px;padding:32px 28px;position:relative;overflow:hidden}
-  .ethics::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--teal-b)}
-  .ethics h3{font-size:19px;font-weight:700;margin:0 0 10px}
-  .ethics p{color:#C1D0DC;font-size:14px;margin:0;max-width:74ch}
-  .ethics b{color:var(--teal-b)}
+  /* sticky single CTA */
+  .sticky{position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--navy);border-top:1px solid rgba(255,255,255,.14);padding:10px 16px}
+  .sticky .cta{max-width:none;width:100%;min-height:48px;padding:10px 16px;font-size:15px}
 
-  /* contact */
-  .contact{background:linear-gradient(160deg,#10283C,var(--navy));color:#fff}
-  .contact h2{font-size:clamp(27px,4.6vw,40px);font-weight:750;letter-spacing:-.025em;margin:0 0 12px}
-  .contact .intro2{color:#C1D0DC;max-width:58ch;margin:0 0 30px}
-  .cgrid{display:grid;gap:14px}
-  .cbox{background:rgba(255,255,255,.05);border:1px solid rgba(0,214,180,.2);border-radius:12px;padding:22px}
-  .cbox .l{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-b);margin-bottom:9px}
-  .cbox a,.cbox strong{display:block;color:#fff;font-size:17px;font-weight:700;word-break:break-word}
-  .cbox a:hover{color:var(--teal-b);text-decoration:none}
-  .cbox small{display:block;color:#9FB1BF;font-size:12px;margin-top:8px}
-  .pay{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);color:#A9BBC8;font-size:13px;max-width:72ch}
-  .pay code{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:2px 7px;border-radius:5px;color:#fff;font-weight:700}
-
-  /* footer */
-  footer{background:#08131F;color:#8FA1B2;font-size:13px;padding:54px 0 24px}
-  .fgrid{display:grid;gap:32px}
-  .fb .logo{margin-bottom:14px}
-  .fb p{max-width:32ch;margin:0 0 16px;font-size:13px}
-  .fb .tag{color:#fff;font-weight:600}
-  .fc h5{color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 14px}
-  .fc a{display:block;color:#8FA1B2;margin:8px 0;font-size:13px}
-  .fc a:hover{color:var(--teal-b);text-decoration:none}
-  .fbot{border-top:1px solid rgba(255,255,255,.09);margin-top:38px;padding-top:20px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
-  .fbot p{margin:0;font-size:12px}
-
-  @media (min-width:680px){
-    .nav-links{display:flex}.nav-cta{display:inline-flex}.menu-btn{display:none}
-    .focus .shell{grid-template-columns:repeat(4,1fr)}
-    .f-item{border-bottom:0;border-right:1px solid var(--line);padding:20px 18px}
-    .f-item:last-child{border-right:0}
-    .f-item:first-child{padding-left:0}
-    .svc-grid{grid-template-columns:1fr 1fr}
-    .pillars{grid-template-columns:repeat(3,1fr)}
-    .steps{grid-template-columns:repeat(4,1fr)}
-    .cgrid{grid-template-columns:repeat(3,1fr)}
-    .fgrid{grid-template-columns:1.6fr 1fr 1fr 1fr}
+  @media (min-width:720px){
+    .wrap{padding:0 24px}
+    .hero{padding:56px 0 52px}
+    .card,.pay{padding:26px 28px}
+    .grid{grid-template-columns:1fr 1fr}
+    .frame iframe{height:660px}
+    .cta{width:auto}
+    .sticky{display:none}
+    body{padding-bottom:0}
+    main{padding-top:14px}
+    footer{text-align:left}
+    footer .inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
   }
-  @media (min-width:960px){
-    .hero,.contact{padding:88px 0}
-    .hero .shell{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-    .panel{display:block}
-    section{padding:84px 0}
-  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Zentry",
-  "url": "https://jaredatandi.github.io/zentry-site/",
-  "image": "https://jaredatandi.github.io/zentry-site/assets/og-image.png",
-  "description": "Zentry is a software engineering and cybersecurity company. We build web, mobile and cloud products and secure them with application security, penetration testing and DevSecOps.",
-  "email": "jaredkeago07@gmail.com",
-  "telephone": "+254701074998",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Nairobi",
-    "addressCountry": "KE"
-  },
-  "areaServed": ["Kenya", "Worldwide"],
-  "sameAs": ["https://www.facebook.com/1513212565204704"],
-  "knowsAbout": [
-    "Software engineering",
-    "Web development",
-    "Mobile development",
-    "Cloud engineering",
-    "Application security",
-    "Penetration testing",
-    "DevSecOps"
-  ]
-}
-</script>
 </head>
 <body>
 
-<nav class="nav" aria-label="Main">
-  <div class="shell">
-    <a class="logo" href="#top" aria-label="Zentry home">
-      <svg viewBox="0 0 44 52" aria-label="Zentry shield"><path d="M22 2 42 10v18c0 12-8.6 19.4-20 22C10.6 47.4 2 40 2 28V10L22 2Z" fill="#0B1B2B" stroke="#00D6B4" stroke-width="2.5"/><path d="M12 16h20l-14 12h14l-20 12 8-12h-8l10-12Z" fill="#00D6B4"/></svg>
-      <span class="word">Zentry<i>.</i></span>
-    </a>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#approach">Why Zentry</a>
-      <a href="#process">How we work</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a class="btn sm nav-cta" href="mailto:jaredkeago07@gmail.com?subject=Project%20enquiry">Start a project &rarr;</a>
-    <button class="menu-btn" id="mb" aria-label="Open menu" aria-expanded="false" aria-controls="mm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-  </div>
-  <div class="m-menu" id="mm">
-    <a href="#services">Services</a><a href="#approach">Why Zentry</a><a href="#process">How we work</a><a href="#contact">Contact</a>
-    <a class="btn" href="mailto:jaredkeago07@gmail.com?subject=Project%20enquiry">Start a project &rarr;</a>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="shell">
-    <div>
-      <p class="overline">Software engineering &nbsp;/&nbsp; Cybersecurity</p>
-      <h1>Software that holds up. <em>Systems that stay safe.</em></h1>
-      <p class="lede">Zentry is an engineering and security company. We design and build web, mobile and cloud products — then test the assumptions that keep them safe after launch.</p>
-      <div class="cta-row">
-        <a class="btn" href="#contact">Start a project &rarr;</a>
-        <a class="btn ghost" href="#services">See our work</a>
-      </div>
-      <div class="hero-contact">
-        <a href="tel:+254701074998"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>+254 701 074 998</a>
-        <a href="mailto:jaredkeago07@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>jaredkeago07@gmail.com</a>
-      </div>
-    </div>
-    <div class="panel" aria-hidden="true">
-      <div class="card">
-        <div class="grid-mark"><i></i><i></i><i></i></div>
-        <div class="matrix">
-          <div class="r"><span class="k">Build</span><span class="v"><b>Web &amp; mobile</b> · APIs &amp; backends · cloud &amp; CI/CD</span></div>
-          <div class="r"><span class="k">Secure</span><span class="v"><b>AppSec</b> · penetration testing · DevSecOps</span></div>
-          <div class="r"><span class="k">Deliver</span><span class="v"><b>Fixed scope</b> · tested · documented · handed over</span></div>
-          <div class="r"><span class="k">Based</span><span class="v"><b>Nairobi, Kenya</b> · working across time zones</span></div>
-        </div>
-      </div>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 44 52" aria-label="Zentry shield" role="img">
+        <path d="M22 2 42 10v18c0 12-8.6 19.4-20 22C10.6 47.4 2 40 2 28V10L22 2Z" fill="#0B1B2B" stroke="#00D6B4" stroke-width="2.5"/>
+        <path d="M12 16h20l-14 12h14l-20 12 8-12h-8l10-12Z" fill="#00D6B4"/>
+        <rect x="16" y="46" width="12" height="2.5" fill="#FFB020"/>
+      </svg>
+      <div><b>ZENTRY<i>.</i></b><p class="tag">Guard the entry. Move at speed.</p></div>
     </div>
   </div>
 </header>
 
-<div class="focus">
-  <div class="shell">
-    <div class="f-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg><div><b>Product engineering</b><span>From first sketch to production</span></div></div>
-    <div class="f-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 17-5-5 5-5M16 7l5 5-5 5M14 4l-4 16"/></svg><div><b>Web, mobile &amp; APIs</b><span>Interfaces and services that connect</span></div></div>
-    <div class="f-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Application security</b><span>Reviews and authorised testing</span></div></div>
-    <div class="f-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg><div><b>DevSecOps</b><span>Security inside your delivery pipeline</span></div></div>
-  </div>
-</div>
-
-<section id="services">
-  <div class="shell">
-    <p class="eyebrow">What we do</p>
-    <h2 class="sec">Engineering and security, together.</h2>
-    <p class="intro">Most teams build a product and hand it over. We work both sides — so the software is sound, and the risks are understood before they become incidents.</p>
-    <div class="svc-grid">
-      <article class="svc">
-        <span class="idx">01 / ENGINEERING</span>
-        <h3>Software Engineering</h3>
-        <p class="desc">Practical software that solves the problem in front of you, built to be maintained afterwards.</p>
-        <ul>
-          <li>Web applications and customer portals</li>
-          <li>Mobile-first interfaces and responsive front ends</li>
-          <li>REST APIs, integrations and backend services</li>
-          <li>Cloud deployment, CI/CD and automation</li>
-          <li>Code review, refactoring and technical takeovers</li>
-          <li>Marketing sites and landing pages</li>
-        </ul>
-      </article>
-      <article class="svc sec2">
-        <span class="idx">02 / SECURITY</span>
-        <h3>Cybersecurity</h3>
-        <p class="desc">Find the gaps while they are still cheap to fix — and build the defences that keep them closed.</p>
-        <ul>
-          <li>Web and API penetration testing (authorised only)</li>
-          <li>Application security and secure code reviews</li>
-          <li>Vulnerability assessment and remediation plans</li>
-          <li>DevSecOps checks inside your delivery pipeline</li>
-          <li>Threat modelling and security architecture</li>
-          <li>Incident response support and hardening</li>
-        </ul>
-      </article>
-    </div>
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">One-page sites for local businesses · Nairobi</p>
+    <h1>See it finished <em>before you pay.</em></h1>
+    <p class="lede">Get a free sample of a real one-page site, built by Zentry. If you like it, we build yours in 48 hours — with a click-to-chat button that sends enquiries straight to your phone.</p>
+    <a class="cta" href="https://wa.me/254701074998?text=Hi%20Zentry%2C%20please%20send%20me%20a%20free%20sample%20one-page%20site%20for%20my%20business.">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.3A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+      Get a free sample
+    </a>
+    <p class="micro">WhatsApp or call +254 701 074 998 · no obligation, no card needed.</p>
   </div>
 </section>
 
-<section class="approach" id="approach">
-  <div class="shell">
-    <p class="eyebrow">Why Zentry</p>
-    <h2 class="sec">A partner, not a marketplace.</h2>
-    <p class="intro">Small team, senior people, clear commitments. You work with the people who actually do the work.</p>
-    <div class="pillars">
-      <div class="pillar"><span class="n">01</span><h4>Both sides in one room</h4><p>Engineering and security happen together. Weaknesses are caught during the build, not after a breach.</p></div>
-      <div class="pillar"><span class="n">02</span><h4>Scope you can sign</h4><p>You get a written scope, fixed quote and timeline before anything starts. No surprise invoices.</p></div>
-      <div class="pillar"><span class="n">03</span><h4>Senior hands on the work</h4><p>The people who scope your project are the people who build and test it. No handoff to a queue.</p></div>
-    </div>
-  </div>
-</section>
+<main>
+  <div class="wrap">
 
-<section id="process">
-  <div class="shell">
-    <p class="eyebrow">How we work</p>
-    <h2 class="sec">Four steps, no theatre.</h2>
-    <p class="intro">A short process so you always know where things stand and what happens next.</p>
-    <div class="steps">
-      <div class="step"><h4>Discuss</h4><p>Tell us the problem, constraints and deadline. A call or an email is enough.</p></div>
-      <div class="step"><h4>Scope</h4><p>We send a written scope, fixed quote and timeline for your approval.</p></div>
-      <div class="step"><h4>Build &amp; test</h4><p>We develop, review and test — including security checks where they matter.</p></div>
-      <div class="step"><h4>Deliver</h4><p>We hand over everything you need and stay available for the follow-up.</p></div>
-    </div>
-  </div>
-</section>
+    <section class="card" aria-labelledby="proof-title">
+      <p class="kicker">Proof — not promises</p>
+      <h2 id="proof-title">Here is a finished page we built.</h2>
+      <p>One full one-page site, built from scratch by Zentry: mobile layout, services, opening hours, enquiry form and a click-to-call button. This is the actual sample file — open it, scroll it, tap around.</p>
+      <div class="frame">
+        <iframe src="samples/proof_page_v2.html" title="Finished sample one-page site built by Zentry" loading="lazy"></iframe>
+      </div>
+      <p class="caption">Sample preview built from public details. Phone number and opening hours in the sample are illustrative placeholders, not published client data.</p>
+      <a class="open" href="samples/proof_page_v2.html" target="_blank" rel="noopener">Open the full sample in a new tab &rarr;</a>
+    </section>
 
-<section>
-  <div class="narrow">
-    <div class="ethics">
-      <h3>Responsible security testing</h3>
-      <p>We only test systems you own, or that you have explicit written permission to assess, and only within an agreed scope. <b>No exceptions.</b> If you want a review of your product, we agree the rules of engagement first — that protects you, your users and us.</p>
-    </div>
-  </div>
-</section>
+    <section class="card" aria-labelledby="price-title">
+      <p class="kicker">Exact prices</p>
+      <h2 id="price-title">Two fixed-price options. No subscription.</h2>
+      <div class="grid">
+        <div class="card tier" style="margin:0">
+          <h3 style="margin:0 0 6px;font-size:17px">The Launch Page</h3>
+          <div class="price">US$79<span>one-off · Kenya clients: KES 2,500</span></div>
+          <ul>
+            <li>Mobile-first one-page site: services, photos, location and hours</li>
+            <li>WhatsApp click-to-chat, call button and enquiry form</li>
+            <li>Matching social media cover graphic</li>
+            <li>Live link on a fast, secure host — yours to keep</li>
+            <li>Delivered in 48 hours of details and payment</li>
+          </ul>
+          <p class="rush">24-hour rush: US$129 / KES 3,500.</p>
+        </div>
+        <div class="card tier alt" style="margin:0">
+          <h3 style="margin:0 0 6px;font-size:17px">Career Express</h3>
+          <div class="price">US$39<span>one-off · Kenya clients: KES 1,000</span></div>
+          <ul>
+            <li>ATS-friendly CV rewrite tailored to one job advert</li>
+            <li>Matching tailored cover letter</li>
+            <li>LinkedIn headline + About section</li>
+            <li>Two revision rounds included</li>
+            <li>Same-day delivery once we have your CV and the job link</li>
+          </ul>
+          <p class="rush">6-hour rush: US$59 / KES 1,500.</p>
+        </div>
+      </div>
+    </section>
 
-<section class="contact" id="contact">
-  <div class="shell">
-    <p class="overline">Get in touch</p>
-    <h2>Tell us what you are building.</h2>
-    <p class="intro2">A product, a security review, or a second opinion. We reply within two hours during Nairobi business hours.</p>
-    <div class="cgrid">
-      <div class="cbox"><div class="l">Call / WhatsApp</div><a href="tel:+254701074998">+254 701 074 998</a><small>Fastest way to reach us</small></div>
-      <div class="cbox"><div class="l">Email</div><a href="mailto:jaredkeago07@gmail.com">jaredkeago07@gmail.com</a><small>Attach a brief if you have one</small></div>
-      <div class="cbox"><div class="l">Office</div><strong>Nairobi, Kenya</strong><small>Working across time zones</small></div>
-    </div>
-    <div class="pay">Payment is by international bank transfer, or by M-Pesa Till <code>6200945</code> if you are in Kenya. Bank details are supplied on confirmation. No subscriptions and no card required.</div>
+    <section class="pay" aria-labelledby="pay-title">
+      <h2 id="pay-title" style="margin:0 0 12px;font-size:20px">How to pay</h2>
+      <dl>
+        <dt>International bank transfer</dt>
+        <dd>Bank details are supplied on confirmation. We never publish or guess them — message us first and we send the exact details.</dd>
+        <dt>Kenya — M-Pesa</dt>
+        <dd>Paybill / Till <code>6200945</code>. Use <strong>your own phone number</strong> as the account reference, then send us your business name, services, town, WhatsApp number and 2–4 photos.</dd>
+      </dl>
+      <p class="fine">No subscriptions, no hidden charges. If the finished page is not what was agreed, we fix it before handover. Work starts once payment is confirmed.</p>
+    </section>
+
+    <section class="card" aria-labelledby="contact-title">
+      <p class="kicker">Contact</p>
+      <h2 id="contact-title">Message us now.</h2>
+      <div class="lines">
+        <p><span class="l">WhatsApp / call</span><a href="tel:+254701074998">+254 701 074 998</a></p>
+        <p><span class="l">Email</span><a href="mailto:jaredkeago07@gmail.com">jaredkeago07@gmail.com</a></p>
+        <p><span class="l">Based in</span><strong>Nairobi, Kenya</strong></p>
+      </div>
+    </section>
+
   </div>
-</section>
+</main>
 
 <footer>
-  <div class="shell">
-    <div class="fgrid">
-      <div class="fb">
-        <a class="logo" href="#top" aria-label="Zentry home"><svg viewBox="0 0 44 52" aria-label="Zentry shield"><path d="M22 2 42 10v18c0 12-8.6 19.4-20 22C10.6 47.4 2 40 2 28V10L22 2Z" fill="#0B1B2B" stroke="#00D6B4" stroke-width="2.5"/><path d="M12 16h20l-14 12h14l-20 12 8-12h-8l10-12Z" fill="#00D6B4"/></svg><span class="word">Zentry<i>.</i></span></a>
-        <p>Software engineering and cybersecurity. We build products and secure them — from Nairobi.</p>
-        <span class="tag">Guard the entry. Move at speed.</span>
-      </div>
-      <div class="fc"><h5>Services</h5><a href="#services">Web applications</a><a href="#services">Mobile &amp; front end</a><a href="#services">APIs &amp; backends</a><a href="#services">Penetration testing</a><a href="#services">AppSec &amp; DevSecOps</a></div>
-      <div class="fc"><h5>Company</h5><a href="#approach">Why Zentry</a><a href="#process">How we work</a><a href="#contact">Contact</a><a href="https://www.facebook.com/1513212565204704" target="_blank" rel="noopener noreferrer">Facebook</a><a href="#top">Back to top</a></div>
-      <div class="fc"><h5>Contact</h5><a href="tel:+254701074998">+254 701 074 998</a><a href="mailto:jaredkeago07@gmail.com">jaredkeago07@gmail.com</a><a href="#contact">Nairobi, Kenya</a></div>
-    </div>
-    <div class="fbot"><p>&copy; 2026 Zentry. All rights reserved.</p><p>Security testing is performed only within agreed, written scope.</p></div>
+  <div class="wrap inner">
+    <div><b>Zentry</b> · Jared Keago, Nairobi<br><p class="tag">Guard the entry. Move at speed.</p></div>
+    <p>Sample work shown for illustration. No invented testimonials — judge the work itself.</p>
   </div>
 </footer>
 
-<script src="assets/site.js" defer></script>
+<div class="sticky">
+  <a class="cta" href="https://wa.me/254701074998?text=Hi%20Zentry%2C%20please%20send%20me%20a%20free%20sample%20one-page%20site%20for%20my%20business.">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.3A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+    Get a free sample
+  </a>
+</div>
+
 </body>
 </html>
